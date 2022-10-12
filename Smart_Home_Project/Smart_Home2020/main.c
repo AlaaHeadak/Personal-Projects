@@ -24,10 +24,10 @@ void main(void)
 
 {
 	char Passward 	      = 1234;
-	char msg[] 	      = "Enter your ID:";
+	char msg[] 	          = "Enter your ID:";
 	char Door[] 	      = "3Door";
 	char TEMP[] 	      = "1Temp";
-	char LDR[] 	      = "2LDR";
+	char LDR[] 	          = "2LDR";
 	char Servo[] 	      = "4Servo";
 	char error[] 	      = "Wrong ID";
 	char welcome[] 	      = "welcome!";
@@ -41,12 +41,7 @@ void main(void)
 	u8 operation;
 	u8 temper;
 	u8 ldr;
-	u8 flag=0;
-	u8 light;
-	u8 name=0;
-	u8 flag_name=0;
-
-
+	
 
 
 
@@ -55,41 +50,37 @@ void main(void)
 	ADC_Init();
 	TIMER1_VidInit();
 	UART_VidInit();
-	DIO_VidSetPinDirection(1,0,1);
-				DIO_VidSetPinDirection(1,1,1);
-				DIO_VidSetPinDirection(1,2,1);
-				DIO_VidSetPinDirection(1,3,1);
-				DIO_VidSetPinDirection(1,4,1);
-				DIO_VidSetPinDirection(1,5,1);
-				DIO_VidSetPinDirection(1,6,1);
-				DIO_VidSetPinDirection(1,7,1);
-				DIO_VidSetPortValue(1,0b00111111);
+	
 	while (1)
 
 	{
 		LCD_Clear();
-		while(name<4)
+		while(error_counter<3&&Flag_correct==0&&flag_error==0)
 		{
 
-			LCD_VidSetPosition(0, 0);
-			LCD_VidWriteString("Enter your name");
-			name= UART_u8Receive();
-			UART_VidSendData(name);
-			LCD_VidSetPosition(1, 0);
-			LCD_VidWriteData(name);
-			name++;
-			_delay_ms(4000);
-
-		}
-		while (error_counter < 3 && Flag_correct == 0 && flag_error==0)
-		{
-			LCD_Clear();
 			LCD_VidSetPosition(0, 0);
 			LCD_VidWriteString(&msg);
 			LCD_VidSetPosition(1, 0);
-			//_delay_ms(10000);
 			digit_counter=0;
 			pressedkey=0;
+
+		while (digit_counter<4)
+		{
+			
+			key=UART_u8Receive();
+			UART_VidSendData(key);
+			
+			if(key!=0)
+			{
+				if(key>=48 && key<=57)
+					key=key-48;
+				LCD_VidWriteData(key+48);
+				pressedkey=pressedkey*10+key;
+				_delay_ms(2000);
+				digit_counter++;
+			}
+		}
+		}
 			while(digit_counter<4)
 			{
 				//key = KPD_U8GetPressedKey();
@@ -124,32 +115,28 @@ void main(void)
 				_delay_ms(5000);
 				LCD_Clear();
 				_delay_ms(5000);
-				DIO_VidSetPinValue(3,6,1);
 				LCD_VidWriteString(&error);
 				error_counter++;
-				Flag_correct = 0;
-				u8 num[4]={0b00111111,0b00000110,0b01011011,0b01001111};
-				DIO_VidSetPortValue(1,num[error_counter]);
-				_delay_ms(4000);
+				Flag_correct=0;
+				_delay_ms(5000);
 
 
 			}
 		}
-		if((error_counter >= 3) && (Flag_correct== 0) &&(flag==0))
+		if((error_counter >= 3) && (Flag_correct== 0))
 		{
-			DIO_VidSetPinDirection(3,6,1);
-			DIO_VidSetPinValue(3,6,1);
+			
 			_delay_ms(5000);
 			LCD_Clear();
 			_delay_ms(5000);
 			LCD_VidWriteString(&no_more_trials);
-			_delay_ms(5000);
+			Operation_Chosen=1;
 
 
 		}
 
 
-		 if ((error_counter <3) && (Flag_correct == 1))
+		 else if ((error_counter <3) && (Flag_correct == 1))
 		{
 			_delay_ms(5000);
 			LCD_Clear();
@@ -157,24 +144,20 @@ void main(void)
 			LCD_VidSetPosition(0, 0);
 			LCD_VidWriteString(&TEMP);
 			LCD_VidSetPosition(0, 8);
-			LCD_VidWriteString("2Light");
+			LCD_VidWriteString(&LDR);
 			LCD_VidSetPosition(1, 0);
-			LCD_VidWriteString("3Door");
-			LCD_VidSetPosition(1, 6);
+			LCD_VidWriteString(&Door);
+			LCD_VidSetPosition(1, 8);
 			LCD_VidWriteString(&Servo);
-			LCD_VidSetPosition(1, 12);
-			LCD_VidWriteString("5LDR");
 			_delay_ms(5000);
 			Flag_correct =0;
-			flag=1;
+		
 		}
 
 
-		while(Operation_Chosen !=1 && flag==1)
+		while(Operation_Chosen !=1 )
 		{
-			//operation = KPD_U8GetPressedKey();
-//			operation = UART_u8Receive();
-//			UART_VidSendData(operation);
+
 			if(operation!=0)
 			{
 				if (operation >= 48 && operation <= 57)
@@ -188,6 +171,11 @@ void main(void)
 
 				operation = UART_u8Receive();
 				UART_VidSendData(operation);
+				_delay_ms(7000);
+				LCD_Clear();
+				LCD_VidSetPosition(0,0);
+				LCD_VidWriteString("Operation_Chosen")
+				_delay_ms(7000);
 
 				switch (operation)
 				{
@@ -218,33 +206,26 @@ void main(void)
 
 					case '2':
 						LCD_Clear();
-						LCD_VidSetPosition(0, 0);
-						LCD_VidWriteString("Light on/of");
-						DIO_VidSetPinDirection(3,7,1);
 						while (1)
 					{
-							light= UART_u8Receive();
-							UART_VidSendData(light);
-							if (light=='a')
-							{
-								DIO_VidSetPinValue(3,7,1);
-							}
-							else if (light=='b')
-							{
-								DIO_VidSetPinValue(3,7,0);
-							}
-						}
-						break;
+							LCD_VidWriteString("LDR=");
+							ldr=ADC_ReadValue(1);
+							LCD_VidWriteNum(ldr);
+							_delay_ms(1000);
+							break;
 					case '3':
 						LCD_Clear();
-						LCD_VidSetPosition(0, 0);
 						DIO_VidSetPinDirection(0,2,1);
 						DIO_VidSetPinDirection(0,3,1);
+						DIO_VidSetPinDirection(3,7,1);
 
 						while (1)
 						{
 						LCD_Clear();
-						LCD_VidWriteString("Safety Door");
+						LCD_VidWriteString("Emergency");
+
+						DIO_VidSetPinValue(3,7,1);
+						
 
 						DIO_VidSetPinValue(0,2,1);
 						_delay_ms(3000);
@@ -254,20 +235,18 @@ void main(void)
 
 						DIO_VidSetPinValue(0,3,1);
 						_delay_ms(3000);
-
+						
 						DIO_VidSetPinValue(0,3,0);
-						_delay_ms(3000);
-
 
 						}
 						break;
 					case '4':
 						LCD_Clear();
-						DIO_VidSetPinDirection(3,5,1);
+						DIO_VidSetPinDirection(0,7,1);
 						while(1)
 						{
 						LCD_Clear();
-						LCD_VidWriteString("Servo Motor");
+						LCD_VidWriteString("open door");
 
 							TIMER1_Set_Duty(31);
 							_delay_ms(1000);
@@ -275,22 +254,12 @@ void main(void)
 							TIMER1_Set_Duty(62);
 							_delay_ms(1000);
 
-							TIMER1_Set_Duty(100);
+							TIMER1_Set_Duty(93);
 							_delay_ms(1000);
 						}
 						break;
 
-					case '5':
-						LCD_Clear();
-						LCD_VidSetPosition(0, 0);
-						LCD_VidWriteString("LDR = ");
-						while (1)
-						{
-						ldr = ADC_ReadValue(1);
-						LCD_VidWriteNum(ldr);
-						_delay_ms(3000);
-						}
-						break;
+			
 
 				}
 
@@ -300,3 +269,5 @@ void main(void)
 
 
 }
+
+
