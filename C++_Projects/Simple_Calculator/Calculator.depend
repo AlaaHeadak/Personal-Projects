@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1665685104 source:g:\advaned modelling\c++\intro\main.cpp
+	<iostream>
+	<math.h>
+
