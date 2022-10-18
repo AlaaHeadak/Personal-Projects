@@ -1,0 +1,46 @@
+/*
+ * RCC_Interface.h
+ *
+ *  Created on: Oct 18, 2022
+ *      Author: LENOVO
+ */
+
+#ifndef ARM_MCAL_RCC_RCC_INTERFACE_H_
+#define ARM_MCAL_RCC_RCC_INTERFACE_H_
+
+void MRCC_vInit(void);
+//enable the clock
+void MRCC_vEnableClock();
+//disable the clock
+void MRCC_vDisableClock();
+
+
+void MRCC_vInit(void)
+{
+	// 1- CSS (on/off)
+
+	// 2- HSE ByPass
+
+	// 3- Select clock (HSI/HSE/PLL)
+
+	// 4- Bus pre-scalar
+
+	// 5- PLL configuration
+
+	// 6- enable the selected clock
+
+
+
+}
+
+void MRCC_vEnableClock()
+{
+
+}
+
+void MRCC_vDisableClock()
+{
+
+}
+
+#endif /* ARM_MCAL_RCC_RCC_INTERFACE_H_ */

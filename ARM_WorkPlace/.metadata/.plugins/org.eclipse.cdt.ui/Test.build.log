@@ -1,0 +1,11 @@
+03:00:24 **** Incremental Build of configuration Release for project Test ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "Test.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3528	     56	    284	   3868	    f1c	Test.elf
+Finished building: Test.siz
+ 
+
+03:00:25 Build Finished (took 421ms)
+

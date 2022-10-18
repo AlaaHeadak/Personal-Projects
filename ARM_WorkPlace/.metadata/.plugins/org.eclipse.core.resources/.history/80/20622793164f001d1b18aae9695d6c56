@@ -1,0 +1,17 @@
+/*
+ * general_configuration.h
+ *
+ *  Created on: Oct 18, 2022
+ *      Author: LENOVO
+ */
+
+#ifndef GENERAL_CONFIGURATION_H_
+#define GENERAL_CONFIGURATION_H_
+
+/* RCC Config
+ * Note: Do not select two types */
+#define RCC_SYS_CLK_RCC 1
+#define RCC_SYS_CLK_HSE 1
+#define RCC_SYS_CLK_HSI 0
+
+#endif /* GENERAL_CONFIGURATION_H_ */
