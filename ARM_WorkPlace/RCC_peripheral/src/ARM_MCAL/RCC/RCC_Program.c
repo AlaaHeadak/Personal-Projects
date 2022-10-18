@@ -38,7 +38,7 @@ void MRCC_vInit(void)
 
 	u32 GEN_clock_output;
 
-	GEN_clock_output=(VCO*RCC_PLLCFGR_PLL_N())/(RCC_PLLCFGR_PLL_M()*RCC_PLLCFGR_PLL_P());
+	GEN_clock_output=(VCO*RCC_PLLN_MHZ_CFG)/(RCC_PLLM_MHZ_CFG*RCC_PLLP_MHZ_CFG);
 	if (GEN_clock_output<=RCC_PLL_BASIC_CLOCK_INPUT_MHZ)
 	{
 		//GEN_clock_output;
