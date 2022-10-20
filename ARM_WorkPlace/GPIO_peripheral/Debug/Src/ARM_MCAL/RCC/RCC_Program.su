@@ -1,0 +1,3 @@
+../Src/ARM_MCAL/RCC/RCC_Program.c:17:6:MRCC_vInit	16	static
+../Src/ARM_MCAL/RCC/RCC_Program.c:59:6:MRCC_vEnableClock	16	static
+../Src/ARM_MCAL/RCC/RCC_Program.c:82:6:MRCC_vDisableClock	16	static

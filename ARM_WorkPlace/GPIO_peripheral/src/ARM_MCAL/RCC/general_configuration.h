@@ -12,27 +12,28 @@
  * Note: Do not select two types at a time
  *
  */
-#define RCC_SYS_CLK_RCC 1
-#define RCC_SYS_CLK_HSE 1
-#define RCC_SYS_CLK_HSI 0
+#define RCC_SYS_CLK_RCC 0
+#define RCC_SYS_CLK_HSE 0
+#define RCC_SYS_CLK_HSI 1
 
 /* RCC PLLP
  *
- * Note: Available values: 2,4,6,8
+ * Note: Available values: 00=2,01=4,10=6,11=8
  * 		 Unit: MHz
  * 		 Default: 4
  */
+#define RCC_PLLP_CFG 0b01
 #define RCC_PLLP_MHZ_CFG 4
 
 /* 192 ≤ PLLN ≤ 432
  * Default: 432
  */
-#define RCC_PLLN_MHZ_CFG 432
+#define RCC_PLLN_MHZ_CFG 336
 
 /* 2 ≤ PLLM ≤ 63
  *
  * Default: 2
  * */
-#define RCC_PLLM_MHZ_CFG 2
+#define RCC_PLLM_MHZ_CFG 16
 
 #endif /* GENERAL_CONFIGURATION_H_ */

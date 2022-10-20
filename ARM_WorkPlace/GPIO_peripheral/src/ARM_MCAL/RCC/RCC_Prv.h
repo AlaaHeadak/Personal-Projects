@@ -10,7 +10,7 @@
 
 #include "../../LIB/STD_TYPES.h"
 
-#define RCC_PLL_BASIC_CLOCK_INPUT_MHZ 84
+
 
 #define HSEON   16
 #define HSEBYP	18

@@ -28,17 +28,8 @@ void MRCC_vInit(void)
 
 	// 4- Bus pre-scalar & PLL Configuration (RCC_PLLCFGR)
 	// 4.0 Check F_MAX:
+	u32 GEN_clock_output = (RCC_PLL_BASIC_CLOCK_INPUT_MHZ*RCC_PLLN_MHZ_CFG)/(RCC_PLLM_MHZ_CFG*RCC_PLLP_MHZ_CFG);
 
-	// 4.1 Config "PLLP" Bits:
-	RCC_PLLCFGR_PLL_P();
-	// 4.2 Config "PLLN" Bits:
-	RCC_PLLCFGR_PLL_N();
-	// 4.3 Config "PLLM" Bits:
-	RCC_PLLCFGR_PLL_M();
-
-	u32 GEN_clock_output;
-
-	GEN_clock_output=(VCO*RCC_PLLN_MHZ_CFG)/(RCC_PLLM_MHZ_CFG*RCC_PLLP_MHZ_CFG);
 	if (GEN_clock_output<=RCC_PLL_BASIC_CLOCK_INPUT_MHZ)
 	{
 		//GEN_clock_output;
@@ -47,6 +38,13 @@ void MRCC_vInit(void)
 	{
 		GEN_clock_output=RCC_PLL_BASIC_CLOCK_INPUT_MHZ;
 	}
+	// 4.1 Config "PLLP" Bits:
+	RCC_PLLCFGR_PLL_P();
+	// 4.2 Config "PLLN" Bits:
+	RCC_PLLCFGR_PLL_N();
+	// 4.3 Config "PLLM" Bits:
+	RCC_PLLCFGR_PLL_M();
+
 
 
 	// 5- enable the selected clock (RCC_CR)

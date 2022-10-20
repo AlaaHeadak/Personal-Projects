@@ -1,0 +1,11 @@
+02:06:20 **** Clean-only build of configuration Debug for project GPIO_Peripherals ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f446retx.d ./Startup/startup_stm32f446retx.o
+rm -rf ./Src/ARM_MCAL/RCC/RCC_Program.d ./Src/ARM_MCAL/RCC/RCC_Program.o ./Src/ARM_MCAL/RCC/RCC_Program.su
+rm -rf ./Src/ARM_MCAL/GPIO/GPIO_Program.d ./Src/ARM_MCAL/GPIO/GPIO_Program.o ./Src/ARM_MCAL/GPIO/GPIO_Program.su
+rm -rf ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf GPIO_Peripherals.elf GPIO_Peripherals.list GPIO_Peripherals.map default.size.stdout
+ 
+
+02:06:20 Build Finished. 0 errors, 0 warnings. (took 211ms)
+

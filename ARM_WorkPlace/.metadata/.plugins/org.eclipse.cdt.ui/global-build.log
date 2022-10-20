@@ -1,22 +1,17 @@
-22:20:27 **** Incremental Build of configuration Release for project RCC_peripheral ****
-make all 
-Building file: ../src/main.c
-Invoking: Cross ARM GNU C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -DNDEBUG -DSTM32F446xx -DUSE_HAL_DRIVER -DHSE_VALUE=18000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
+02:08:48 **** Incremental Build of configuration Debug for project GPIO_Peripheral ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:25:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   25 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "GPIO_Peripheral.elf" @"objects.list"   -mcpu=cortex-m4 -T"G:\GitHub\New folder\ARM_WorkPlace\GPIO_Peripheral\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_Peripheral.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_Peripheral.elf
  
-Building target: RCC_peripheral.elf
-Invoking: Cross ARM GNU C++ Linker
-arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"RCC_peripheral.map" --specs=nano.specs -o "RCC_peripheral.elf"  ./system/src/stm32f4-hal/stm32f4xx_hal.o ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.o ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.o  ./system/src/newlib/_cxx.o ./system/src/newlib/_exit.o ./system/src/newlib/_sbrk.o ./system/src/newlib/_startup.o ./system/src/newlib/_syscalls.o ./system/src/newlib/assert.o  ./system/src/diag/Trace.o ./system/src/diag/trace_impl.o  ./system/src/cortexm/_initialize_hardware.o ./system/src/cortexm/_reset_hardware.o ./system/src/cortexm/exception_handlers.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f446xx.o  ./src/ARM_MCAL/RCC/RCC_Program.o  ./src/BlinkLed.o ./src/Timer.o ./src/_initialize_hardware.o ./src/_write.o ./src/main.o ./src/stm32f4xx_hal_msp.o   
-Finished building target: RCC_peripheral.elf
- 
-Invoking: Cross ARM GNU Create Flash Image
-arm-none-eabi-objcopy -O ihex "RCC_peripheral.elf"  "RCC_peripheral.hex"
-Finished building: RCC_peripheral.hex
- 
-Invoking: Cross ARM GNU Print Size
-arm-none-eabi-size --format=berkeley "RCC_peripheral.elf"
+arm-none-eabi-size   GPIO_Peripheral.elf 
+arm-none-eabi-objdump -h -S  GPIO_Peripheral.elf  > "GPIO_Peripheral.list"
    text	   data	    bss	    dec	    hex	filename
-   2808	     52	    268	   3128	    c38	RCC_peripheral.elf
-Finished building: RCC_peripheral.siz
+   1888	      8	   1568	   3464	    d88	GPIO_Peripheral.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_Peripheral.list
  

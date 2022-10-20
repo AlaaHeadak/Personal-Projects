@@ -1,0 +1,16 @@
+02:00:03 **** Build of configuration Debug for project GPIO_Test ****
+make -j8 all 
+arm-none-eabi-gcc -o "GPIO_Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"G:\GitHub\New folder\ARM_WorkPlace\GPIO_Test\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_Test.elf
+ 
+arm-none-eabi-size   GPIO_Test.elf 
+arm-none-eabi-objdump -h -S  GPIO_Test.elf  > "GPIO_Test.list"
+   text	   data	    bss	    dec	    hex	filename
+    960	      8	   1568	   2536	    9e8	GPIO_Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_Test.list
+ 
+
+02:00:05 Build Finished. 0 errors, 0 warnings. (took 1s.364ms)
+
