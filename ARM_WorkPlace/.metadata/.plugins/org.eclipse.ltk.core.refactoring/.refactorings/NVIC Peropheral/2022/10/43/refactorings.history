@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;NVIC Peropheral/src/NVIC&apos; to &apos;ARM_MCAL&apos;" description="Rename resource &apos;NVIC&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/NVIC" name="ARM_MCAL" stamp="1666313310256" updateReferences="true"/>
+</session>

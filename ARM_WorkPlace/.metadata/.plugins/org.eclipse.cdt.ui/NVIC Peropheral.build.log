@@ -1,0 +1,45 @@
+16:49:22 **** Incremental Build of configuration Release for project NVIC Peropheral ****
+make all 
+Building file: ../src/ARM_MCAL/RCC/RCC_Program.c
+Invoking: Cross ARM GNU C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -DNDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/ARM_MCAL/RCC/RCC_Program.d" -MT"src/ARM_MCAL/RCC/RCC_Program.o" -c -o "src/ARM_MCAL/RCC/RCC_Program.o" "../src/ARM_MCAL/RCC/RCC_Program.c"
+In file included from ../src/ARM_MCAL/RCC/RCC_Program.c:8:0:
+../src/ARM_MCAL/RCC/RCC_Program.c: In function 'MRCC_vInit':
+../src/ARM_MCAL/RCC/RCC_Interface.h:79:62: warning: value computed is not used [-Wunused-value]
+ #define RCC_PLLCFGR_PLL_P() ((RCC->PLLCFGR & RCC_PLL_P_MASK) | ((RCC_PLLCFGR_PLLP_MHZ << RCC_PLL_P_INDEX)))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ARM_MCAL/RCC/RCC_Program.c:42:2: note: in expansion of macro 'RCC_PLLCFGR_PLL_P'
+  RCC_PLLCFGR_PLL_P();
+  ^~~~~~~~~~~~~~~~~
+../src/ARM_MCAL/RCC/RCC_Interface.h:82:62: warning: value computed is not used [-Wunused-value]
+ #define RCC_PLLCFGR_PLL_N() ((RCC->PLLCFGR & RCC_PLL_N_MASK) | ((RCC_PLLCFGR_PLLN_MHZ << RCC_PLL_N_INDEX)))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ARM_MCAL/RCC/RCC_Program.c:44:2: note: in expansion of macro 'RCC_PLLCFGR_PLL_N'
+  RCC_PLLCFGR_PLL_N();
+  ^~~~~~~~~~~~~~~~~
+../src/ARM_MCAL/RCC/RCC_Interface.h:85:62: warning: value computed is not used [-Wunused-value]
+ #define RCC_PLLCFGR_PLL_M() ((RCC->PLLCFGR & RCC_PLL_M_MASK) | ((RCC_PLLCFGR_PLLM_MHZ << RCC_PLL_M_INDEX)))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ARM_MCAL/RCC/RCC_Program.c:46:2: note: in expansion of macro 'RCC_PLLCFGR_PLL_M'
+  RCC_PLLCFGR_PLL_M();
+  ^~~~~~~~~~~~~~~~~
+Finished building: ../src/ARM_MCAL/RCC/RCC_Program.c
+ 
+Building target: NVIC Peropheral.elf
+Invoking: Cross ARM GNU C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"NVIC Peropheral.map" --specs=nano.specs -o "NVIC Peropheral.elf"  ./system/src/stm32f4-hal/stm32f4xx_hal.o ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.o ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.o  ./system/src/newlib/_cxx.o ./system/src/newlib/_exit.o ./system/src/newlib/_sbrk.o ./system/src/newlib/_startup.o ./system/src/newlib/_syscalls.o ./system/src/newlib/assert.o  ./system/src/diag/Trace.o ./system/src/diag/trace_impl.o  ./system/src/cortexm/_initialize_hardware.o ./system/src/cortexm/_reset_hardware.o ./system/src/cortexm/exception_handlers.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f407xx.o  ./src/ARM_MCAL/RCC/RCC_Program.o  ./src/ARM_MCAL/NVIC/NVIC_Program.o  ./src/ARM_MCAL/GPIO/GPIO_Program.o  ./src/BlinkLed.o ./src/Timer.o ./src/_initialize_hardware.o ./src/_write.o ./src/main.o ./src/stm32f4xx_hal_msp.o   
+Finished building target: NVIC Peropheral.elf
+ 
+Invoking: Cross ARM GNU Create Flash Image
+arm-none-eabi-objcopy -O ihex "NVIC Peropheral.elf"  "NVIC Peropheral.hex"
+Finished building: NVIC Peropheral.hex
+ 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "NVIC Peropheral.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2748	     52	    268	   3068	    bfc	NVIC Peropheral.elf
+Finished building: NVIC Peropheral.siz
+ 
+
+16:49:23 Build Finished (took 864ms)
+
