@@ -17,7 +17,7 @@ def game():
     print("Welcome to the Number Guessing Game")
 
     answer = randint(1, 100)
-    print(answer)
+    #print(answer)
     turns=Num_Of_tries()
 
     lives = 0
