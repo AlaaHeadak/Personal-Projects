@@ -1,7 +1,11 @@
-02:48:37 **** Clean-only build of configuration Debug for project NVIC_GPIO_RCC ****
-make clean 
-rm -rf  ./system/src/stm32f4-hal/stm32f4xx_hal.o ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.o ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.o  ./system/src/newlib/_cxx.o ./system/src/newlib/_exit.o ./system/src/newlib/_sbrk.o ./system/src/newlib/_startup.o ./system/src/newlib/_syscalls.o ./system/src/newlib/assert.o  ./system/src/diag/Trace.o ./system/src/diag/trace_impl.o  ./system/src/cortexm/_initialize_hardware.o ./system/src/cortexm/_reset_hardware.o ./system/src/cortexm/exception_handlers.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f407xx.o  ./src/ARM_MCAL/RCC/RCC_program.o  ./src/ARM_MCAL/NVIC/NVIC_program.o  ./src/ARM_MCAL/GPIO/GPIO_program.o  ./src/ARM_MCAL/EXTI/EXTI_program.o  ./src/_initialize_hardware.o ./src/_write.o ./src/main.o ./src/stm32f4xx_hal_msp.o  NVIC_GPIO_RCC.hex  NVIC_GPIO_RCC.siz  ./system/src/stm32f4-hal/stm32f4xx_hal.d ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.d ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.d ./system/src/stm32f4-hal/stm32f4xx_hal_flash.d ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.d ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.d ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.d ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.d  ./system/src/newlib/_exit.d ./system/src/newlib/_sbrk.d ./system/src/newlib/_startup.d ./system/src/newlib/_syscalls.d ./system/src/newlib/assert.d  ./system/src/diag/Trace.d ./system/src/diag/trace_impl.d  ./system/src/cortexm/_initialize_hardware.d ./system/src/cortexm/_reset_hardware.d ./system/src/cortexm/exception_handlers.d  ./system/src/cmsis/system_stm32f4xx.d ./system/src/cmsis/vectors_stm32f407xx.d  ./src/ARM_MCAL/RCC/RCC_program.d  ./src/ARM_MCAL/NVIC/NVIC_program.d  ./src/ARM_MCAL/GPIO/GPIO_program.d  ./src/ARM_MCAL/EXTI/EXTI_program.d  ./src/_initialize_hardware.d ./src/_write.d ./src/main.d ./src/stm32f4xx_hal_msp.d  ./system/src/newlib/_cxx.d  NVIC_GPIO_RCC.elf
+03:42:02 **** Incremental Build of configuration Debug for project NVIC_GPIO_RCC ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "NVIC_GPIO_RCC.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6155	    156	    416	   6727	   1a47	NVIC_GPIO_RCC.elf
+Finished building: NVIC_GPIO_RCC.siz
  
 
-02:48:38 Build Finished (took 217ms)
+03:42:03 Build Finished (took 417ms)
 

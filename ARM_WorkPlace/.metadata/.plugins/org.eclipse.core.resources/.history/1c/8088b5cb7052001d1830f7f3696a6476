@@ -15,10 +15,8 @@
 
 int main(void)
 {
-	MRCC_voidInit();
-	MRCC_voidPeripheralEnable(AHB1,GPIOAEN);
 	MGPIO_voidSetPinDirection(GPIOA_PORT,PIN0,OUTPUT_PUSH_PULL,MEDIUM_SPEED);
-	MGPIO_voidSetPinValue(GPIOA_PORT,PIN0,HIGH);
+	MGPIO_voidSetPinValue(GPIOA_PORT,PIN0,High);
 
 
 
