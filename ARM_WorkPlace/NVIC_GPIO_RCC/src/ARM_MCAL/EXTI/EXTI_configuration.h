@@ -1,0 +1,4 @@
+#ifndef EXTI_CONFIGURATION_H_
+#define EXTI_CONFIGURATION_H_
+
+#endif /* EXTI_CONFIGURATION_H_ */
