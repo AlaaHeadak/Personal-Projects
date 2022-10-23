@@ -1,0 +1,27 @@
+#include "../include/LIB/STD_TYPES.h"
+#include "../include/LIB/BIT_MATH.h"
+#include "../include/LIB/LIB.h"
+
+#include "../include/MCAL/RCC/RCC_interface.h"
+#include "../include/MCAL/RCC/RCC_private.h"
+#include "../include/MCAL/RCC/RCC_configuration.h"
+
+#include "../include/MCAL/GPIO/GPIO_interface.h"
+#include "../include/MCAL/GPIO/GPIO_private.h"
+#include "../include/MCAL/GPIO/GPIO_configurations.h"
+
+#include "../include/MCAL/EXTI/EXTI_interface.h"
+#include "../include/MCAL/EXTI/EXTI_private.h"
+#include "../include/MCAL/EXTI/EXTI_configuration.h"
+
+int main(int argc, char *argv[])
+{
+  // At this stage the system clock should have already been configured
+  // at high speed.
+
+  // Infinite loop
+  while (1)
+  {
+    // Add your code here.
+  }
+}

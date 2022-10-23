@@ -1,0 +1,11 @@
+02:27:38 **** Incremental Build of configuration Debug for project NVIC_GPIO_RCC ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "NVIC_GPIO_RCC.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4267	    156	    412	   4835	   12e3	NVIC_GPIO_RCC.elf
+Finished building: NVIC_GPIO_RCC.siz
+ 
+
+02:27:39 Build Finished (took 367ms)
+

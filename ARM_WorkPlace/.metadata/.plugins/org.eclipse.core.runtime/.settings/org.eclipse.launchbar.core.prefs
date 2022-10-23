@@ -2,9 +2,11 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
 activeLaunchTarget=null\:---
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GPIO_Test
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:NVIC Peripheral.elf,org.eclipse.launchbar.core.descriptorType.default\:NVIC Peripheral Release,org.eclipse.launchbar.core.descriptorType.default\:NVIC Peripheral Debug,org.eclipse.launchbar.core.descriptorType.default\:NVIC_GPIO_RCC Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GPIO_Test/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GPIO_Test/activeLaunchTarget=null\:---
 org.eclipse.launchbar.core.descriptorType.default\:GPIO_Test/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:GPIO_Test/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:NVIC\ Peripheral\ Release/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:NVIC\ Peripheral\ Release/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
