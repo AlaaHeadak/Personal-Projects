@@ -1,48 +1,16 @@
-03:32:39 **** Incremental Build of configuration Release for project NVIC_GPIO_RCC ****
+15:03:52 **** Incremental Build of configuration Debug for project NVIC_GPIO_RCC_EXTI ****
 make all 
 Invoking: Cross ARM GNU Print Size
-arm-none-eabi-size --format=berkeley "NVIC_GPIO_RCC.elf"
+arm-none-eabi-size --format=berkeley "NVIC_GPIO_RCC_EXTI.elf"
    text	   data	    bss	    dec	    hex	filename
-   2194	     48	    264	   2506	    9ca	NVIC_GPIO_RCC.elf
-Finished building: NVIC_GPIO_RCC.siz
+   6491	    156	    416	   7063	   1b97	NVIC_GPIO_RCC_EXTI.elf
+Finished building: NVIC_GPIO_RCC_EXTI.siz
  
-03:37:48 **** Incremental Build of configuration Debug for project NVIC_GPIO_RCC ****
+15:04:01 **** Incremental Build of configuration Release for project NVIC_GPIO_RCC_EXTI ****
 make all 
 Invoking: Cross ARM GNU Print Size
-arm-none-eabi-size --format=berkeley "NVIC_GPIO_RCC.elf"
+arm-none-eabi-size --format=berkeley "NVIC_GPIO_RCC_EXTI.elf"
    text	   data	    bss	    dec	    hex	filename
-   6155	    156	    416	   6727	   1a47	NVIC_GPIO_RCC.elf
-Finished building: NVIC_GPIO_RCC.siz
- 
-03:38:07 **** Incremental Build of configuration Debug for project NVIC_GPIO_RCC ****
-make all 
-Invoking: Cross ARM GNU Print Size
-arm-none-eabi-size --format=berkeley "NVIC_GPIO_RCC.elf"
-   text	   data	    bss	    dec	    hex	filename
-   6155	    156	    416	   6727	   1a47	NVIC_GPIO_RCC.elf
-Finished building: NVIC_GPIO_RCC.siz
- 
-03:40:00 **** Incremental Build of configuration Debug for project NVIC_GPIO_RCC ****
-make all 
-Invoking: Cross ARM GNU Print Size
-arm-none-eabi-size --format=berkeley "NVIC_GPIO_RCC.elf"
-   text	   data	    bss	    dec	    hex	filename
-   6155	    156	    416	   6727	   1a47	NVIC_GPIO_RCC.elf
-Finished building: NVIC_GPIO_RCC.siz
- 
-03:41:05 **** Incremental Build of configuration Debug for project NVIC_GPIO_RCC ****
-make all 
-Invoking: Cross ARM GNU Print Size
-arm-none-eabi-size --format=berkeley "NVIC_GPIO_RCC.elf"
-   text	   data	    bss	    dec	    hex	filename
-   6155	    156	    416	   6727	   1a47	NVIC_GPIO_RCC.elf
-Finished building: NVIC_GPIO_RCC.siz
- 
-03:42:02 **** Incremental Build of configuration Debug for project NVIC_GPIO_RCC ****
-make all 
-Invoking: Cross ARM GNU Print Size
-arm-none-eabi-size --format=berkeley "NVIC_GPIO_RCC.elf"
-   text	   data	    bss	    dec	    hex	filename
-   6155	    156	    416	   6727	   1a47	NVIC_GPIO_RCC.elf
-Finished building: NVIC_GPIO_RCC.siz
+   2500	     48	    264	   2812	    afc	NVIC_GPIO_RCC_EXTI.elf
+Finished building: NVIC_GPIO_RCC_EXTI.siz
  
