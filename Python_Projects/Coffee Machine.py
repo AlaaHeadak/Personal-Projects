@@ -50,7 +50,7 @@ def measuring_coins():
 def not_enough_money(payment,drink_cost):
     if payment>drink_cost:
         remaining= round(payment-drink_cost,2)
-        print(f"Here is ${remaining} of the payment.")
+        print(f"Here is the change ${remaining} ")
         global profit
         profit=profit+drink_cost
         return 1
@@ -63,12 +63,12 @@ def Coffee(your_drink,order_ingredients):
         resources[items]-=order_ingredients[items]
     print(f"Here is your {your_drink} ☕️. Enjoy!")
 
-is_on = True
+on = True
 
-while is_on:
+while on:
     choice = input("What would you like? (espresso 1.5$ /latte 2.5$ /cappuccino 3$): ")
     if choice == "off":
-        is_on = False
+        on = False
     elif choice == "report":
         print(f"Water: {resources['water']}ml")
         print(f"Milk: {resources['milk']}ml")
