@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="C++_Projects" Database="" Version="10000" SWTLW="Yes">
+  <WorkspaceParserMacros/>
+  <WorkspaceParserPaths/>
+  <Project Name="Menu_Selection" Path="Menu_Selection/Menu_Selection.project" Active="No"/>
+  <Project Name="Registration_and_login" Path="Simple_Projects/Registration_and_login/Registration_and_login.project" Active="No"/>
+  <Project Name="Cipher_Encryption_OOP" Path="Cipher_Encryption/Cipher_Encryption.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug">
+      <Environment/>
+      <Project Name="Menu_Selection" ConfigName="Debug"/>
+      <Project Name="Registration_and_login" ConfigName="Debug"/>
+      <Project Name="Cipher_Encryption_OOP" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release">
+      <Environment/>
+      <Project Name="Menu_Selection" ConfigName="Release"/>
+      <Project Name="Registration_and_login" ConfigName="Release"/>
+      <Project Name="Cipher_Encryption_OOP" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
