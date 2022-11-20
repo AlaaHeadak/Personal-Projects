@@ -1,4 +1,8 @@
 [{
+  "file": "G:\\GitHub\\GitHub\\C++_Projects\\Menu_Selection_enhancement\\main.cpp",
+  "directory": "G:\\GitHub\\GitHub\\C++_Projects\\Menu_Selection_enhancement",
+  "command": "C:/mingw64/bin/g++.exe -c G:\\GitHub\\GitHub\\C++_Projects\\Menu_Selection_enhancement\\main.cpp -o G:\\GitHub\\GitHub\\C++_Projects\\Menu_Selection_enhancement\\main.cpp.o -target x86_64-w64-mingw32 -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include\\c++ -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include\\c++\\x86_64-w64-mingw32 -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include\\c++\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -g  -O0  -Wall"
+ }, {
   "file": "G:\\GitHub\\GitHub\\C++_Projects\\Cipher_Encryption\\main.cpp",
   "directory": "G:\\GitHub\\GitHub\\C++_Projects\\Cipher_Encryption",
   "command": "C:/mingw64/bin/g++.exe -c G:\\GitHub\\GitHub\\C++_Projects\\Cipher_Encryption\\main.cpp -o G:\\GitHub\\GitHub\\C++_Projects\\Cipher_Encryption\\main.cpp.o -target x86_64-w64-mingw32 -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include\\c++ -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include\\c++\\x86_64-w64-mingw32 -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include\\c++\\backward -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include -IC:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include-fixed -IC:\\mingw64\\x86_64-w64-mingw32\\include -I. -I.  -g  -O0  -std=c++17  -Wall"

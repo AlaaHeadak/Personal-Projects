@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ Cipher_Encryption_OOP - Debug ]----------"
-	@cd "Cipher_Encryption" && "$(MAKE)" -f  "Cipher_Encryption_OOP.mk"
+	@echo "----------Building project:[ Menu_Selection_enhancement - Debug ]----------"
+	@cd "Menu_Selection_enhancement" && "$(MAKE)" -f  "Menu_Selection_enhancement.mk"
 clean:
-	@echo "----------Cleaning project:[ Cipher_Encryption_OOP - Debug ]----------"
-	@cd "Cipher_Encryption" && "$(MAKE)" -f  "Cipher_Encryption_OOP.mk" clean
+	@echo "----------Cleaning project:[ Menu_Selection_enhancement - Debug ]----------"
+	@cd "Menu_Selection_enhancement" && "$(MAKE)" -f  "Menu_Selection_enhancement.mk" clean
