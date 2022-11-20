@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="G:\GitHub\GitHub\C++_Projects\C++_Projects.workspace">
-  <int Value="0" Name="m_selectedTab"/>
+  <int Value="1" Name="m_selectedTab"/>
   <wxString Value="G:\GitHub\GitHub\C++_Projects\C++_Projects.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="G:\GitHub\GitHub\C++_Projects\Menu_Selection\main.cpp" Name="FileName"/>
-      <int Value="108" Name="FirstVisibleLine"/>
-      <int Value="110" Name="CurrentLine"/>
+      <int Value="6" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="G:\GitHub\GitHub\C++_Projects\Cipher_Encryption\main.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="11" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
