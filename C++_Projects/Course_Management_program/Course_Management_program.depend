@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1674082789 source:c:\users\nxf68627\desktop\c++ exam material\c++ codes\course_management_program\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<fstream>
+	"Course.h"
+	"Person.h"
+
+1674081846 c:\users\nxf68627\desktop\c++ exam material\c++ codes\course_management_program\course.h
+	<iostream>
+	<string>
+	<vector>
+	"Person.h"
+	<iterator>
+
+1673991918 c:\users\nxf68627\desktop\c++ exam material\c++ codes\course_management_program\person.h
+	<iostream>
+	<string>
+	<vector>
+
+1674082357 source:c:\users\nxf68627\desktop\c++ exam material\c++ codes\course_management_program\course.cpp
+	"Course.h"
+
+1674082003 source:c:\users\nxf68627\desktop\c++ exam material\c++ codes\course_management_program\person.cpp
+	"Person.h"
+	"Course.h"
+
